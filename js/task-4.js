@@ -163,3 +163,114 @@
 // }
 // };
 // console.log(searchInsert(nums, target));
+// const user = {
+//   name: "Peter",
+//   age: 30,
+//   pet: "cat",
+//   "Wether is good": false,
+// };
+
+
+// console.log(user["Wether is good"]);
+ 
+
+
+// function calcAverageCalories(days) {
+//    const sum = 0;
+//    for(const i = 0; i < days.length; i++) {
+//        sum += days[i];
+//    }
+//    return sum / days.length
+//   }
+// function calcAverageCalories(days) {
+//   let sum = 0 
+//   for (let i = 0; i < days.length; i++) {
+//     sum += days[i].calories;
+//   }
+//   return sum / days.length
+// }
+// console.log(
+//   calcAverageCalories([
+//     { day: "monday", calories: 3010 },
+//     { day: "tuesday", calories: 3200 },
+//     { day: "wednesday", calories: 3120 },
+//     { day: "thursday", calories: 2900 },
+//     { day: "friday", calories: 3450 },
+//     { day: "saturday", calories: 3280 },
+//     { day: "sunday", calories: 3300 }
+//   ])
+// ); // 3180
+// console.log(
+//   calcAverageCalories([
+//     { day: "monday", calories: 2040 },
+//     { day: "tuesday", calories: 2270 },
+//     { day: "wednesday", calories: 2420 },
+//     { day: "thursday", calories: 1900 },
+//     { day: "friday", calories: 2370 },
+//     { day: "saturday", calories: 2280 },
+//     { day: "sunday", calories: 2610 }
+//   ])
+// ); // 2270
+
+// console.log(
+//   calcAverageCalories([])
+// ); // 0
+
+function calcAverageCalories(days) {
+  let sumCalories = 0;
+  if(days.length === 0){
+    return 0;
+  }
+  for(let daysCalories of days) {
+      sumCalories += daysCalories.calories;
+  }
+  return sumCalories / days.length;
+}
+console.log(
+  calcAverageCalories([
+    { day: "monday", calories: 3010 },
+    { day: "tuesday", calories: 3200 },
+    { day: "wednesday", calories: 3120 },
+    { day: "thursday", calories: 2900 },
+    { day: "friday", calories: 3450 },
+    { day: "saturday", calories: 3280 },
+    { day: "sunday", calories: 3300 }
+  ])
+); // 3180
+
+console.log(
+  calcAverageCalories([
+    { day: "monday", calories: 2040 },
+    { day: "tuesday", calories: 2270 },
+    { day: "wednesday", calories: 2420 },
+    { day: "thursday", calories: 1900 },
+    { day: "friday", calories: 2370 },
+    { day: "saturday", calories: 2280 },
+    { day: "sunday", calories: 2610 }
+  ])
+); // 2270
+
+console.log(
+  calcAverageCalories([])
+); // 0
+  
+// function averageСost(arr) {
+//   return arr.reduce((partial_sum, a) => partial_sum + a, 0) / arr.length; 
+// }
+
+// console.log(averageСost([33, 46, 12, 19]));
+// console.log(averageСost([3, 6, 2, 9]));
+// console.log(averageСost([6, 6, 32, 9]));
+// console.log(averageСost([]));
+
+// const data = [
+//   {name: "Ann", age: 24},
+//   {name: "Bred", age: 27},
+//   {name: "Grace", age: 21},
+//   {name: "Alex", age: 30},
+//   {name: "Robby", age: 25}
+// ];
+
+// let avg = data.reduce((r,i) => r + i.age, 0) / (data.length || 1);
+// console.log(avg);
+// console.log();

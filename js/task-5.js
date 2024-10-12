@@ -305,3 +305,201 @@
 //  console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2)); // ["Earth", "Jupiter"]
 //  console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4)); // ["Earth", "Jupiter", "Neptune", "Uranus"]
 //  console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0)); // []
+
+
+// const atTheOldToad = {
+//   potions: [],
+//    getPotions() {
+//      return  "List of all available potions";
+//   },
+//   addPotion(potionName) {
+//     return `Adding ${potionName}`;
+//   },
+// }
+
+// console.log(atTheOldToad.addPotion("Invisibility")); //"Adding Invisibility"
+// console.log(atTheOldToad.addPotion("Power potion")); //"Adding Power potion"
+// console.log(atTheOldToad.getPotions()); //"List of all available potions"
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     return this.potions.push(newPotion);
+//   },
+//   getTotalPrice() {
+//          let totalPrice = 0 ;
+//     for (const potion of this.potions) {
+//       totalPrice += potion.price;
+//     }
+
+//     return totalPrice;
+//   },
+// };
+
+// console.log(atTheOldToad.getTotalPrice());
+// console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   updatePotionName(oldName, newName) {
+//      for(const potion of this.potions) {
+// 			if(potion.name === oldName) {
+// 				 return potion.name = newName;
+// 			}
+        
+// 		}   
+//   },
+// };
+// console.log(atTheOldToad.updatePotionName("Stone skin", "Invisibility"));
+// `[{ name: "Speed ​​potion", price: 460 }, { name: "Invisibility", price : 520 } ]`
+
+// function add(...args) {
+//   let total = 0;
+//     for (const arg of args) {
+//     total += arg;
+//     }
+//     return total;
+// }
+// console.log(sum(15, 27));
+// console.log(sum(12, 4, 11, 48));
+// console.log(sum(32, 6, 13, 19, 8));
+
+
+// function addOverNum(value, ...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     if (arg > value) {
+//         total += arg;
+//     }
+//   }
+//   return total;
+// }
+// console.log(addOverNum(50, 15, 27))
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8))
+
+// function getExtremeScores(scores) {
+  
+//   return {best: Math.max(...scores), worst: Math.min(...scores)};
+// }
+
+
+
+// console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26]));
+// console.log(getExtremeScores([19, 7, 4, 17, 81, 24]));
+
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+
+// const allScores = [... firstGroupScores, ... secondGroupScores, ... thirdGroupScores];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+
+
+// console.log(allScores);
+
+// const objA = {  
+// 	x:  1 , 
+//  	y:  2 , 
+//  };
+
+// const objB = {  
+// 	y:  3 , 
+//  };
+
+// const result  =  { 
+// 	x:  5 ,
+// 	...objA,
+// 	y:  10 ,
+// 	... objB,
+// 	z:  15 
+// }
+// console.log(result);
+
+
+// function isEnoughCapacity(products, containerSize) {
+//   let total = 0;
+//   for (const key in products) {
+//       total += products[key]
+//   }
+//   return total < containerSize;
+// }
+// console.log(
+//   isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)
+// ); // true
+
+// console.log(
+//   isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)
+// ); // false
+
+// console.log(
+//   isEnoughCapacity({ apples: 1, lime: 5, tomatos: 3 }, 14)
+// ); // true
+
+
+// function calcAverageCalories(days) {
+//   let totalCalories = 0;
+//   if (!days.length) {
+//       return `You have not provided enough information`;
+//   }
+
+//   for (let dayCalories of days) {
+//       totalCalories += dayCalories.calories;
+//   }
+
+//   return totalCalories / days.length;
+// }
+
+
+// console.log(
+//   calcAverageCalories([
+//       { day: "monday", calories: 3010 },
+//       { day: "tuesday", calories: 3200 },
+//       { day: "wednesday", calories: 3120 },
+//       { day: "thursday", calories: 2900 },
+//       { day: "friday", calories: 3450 },
+//       { day: "saturday", calories: 3280 },
+//       { day: "sunday", calories: 3300 }
+//   ])
+// ); // 3180
+
+
+const profile = {
+  username: "Jacob",
+  playTime: 300,
+  changeUsername(newName) {
+      this.username = newName;
+  },
+  updatePlayTime(hours) {
+      this.playTime += hours;
+  },
+  getInfo() {
+      return `${this.username} has ${this.playTime} active hours!`
+  },
+};
+
+
+console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+
+profile.changeUsername("Marco");
+console.log(profile.getInfo()); // "Marco has 300 active hours!"
+
+profile.updatePlayTime(20);
+console.log(profile.getInfo()); // "Marco has 320 active hours!"
